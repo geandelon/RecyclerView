@@ -3,6 +3,7 @@ package com.example.bruno.recyclerview;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,8 @@ public class MyAdapterTeste extends RecyclerView.Adapter<MyAdapterTeste.ViewHold
         holder.tv_titulo.setText(itemFilme.getTitulo());
         Picasso.get().load("https://image.tmdb.org/t/p/w500" + itemFilme.getImageUrl())
                 .into(holder.iv_imagem);
+
+        //Log.d("MyAdapterTeste", itemFilme.getTitulo());
 
     }
 
